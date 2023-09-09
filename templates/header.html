@@ -1,0 +1,62 @@
+{% load static %}
+<style></style>
+<nav
+  class="py-4 px-2 position-fixed top-0 w-100 navbar border-bottom navbar-expand-lg navbar-light"
+  style="z-index: 1; background-color: black"
+>
+  <h5 class="d-md-flex text-light">Tehilians</h5>
+  <i class="d-md-flex bi bi-x-diamond text-light mx-2"></i>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navCollapse"
+    aria-controls="navCollapse"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navCollapse">
+    <ul
+      class="d-flex navbar-nav align-items-center justify-content-center ms-auto"
+    >
+      {% if not request.user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{% url 'account:accounts' %}"
+          >Log/sign in</a
+        >
+
+        {% else %}
+        <div class="dropdown">
+          <a
+            class="dropdown-toggle"
+            type="button"
+            id="dropdownToggle"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            ><i class="bi bi-x-diamond"></i
+          ></a>
+
+          <div
+            class="dropdown-menu dropdown-menu-left"
+            style="margin-left: -150px; z-index: 100"
+            aria-labelledby="dropdownToggle"
+          >
+            <a class="dropdown-item" href="{% url 'core:home' %}">Home</a>
+            <a class="dropdown-item" href="{% url 'account:dashboard' %}"
+              >My Account</a
+            >
+            <a class="dropdown-item" href="{% url 'account:logout' %}"
+              >Log Out</a
+            >
+          </div>
+        </div>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>

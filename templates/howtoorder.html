@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+<style></style>
+{% load static %}
+<!-- block bgnn -->
+{% block content %}
+
+<div class="card card-body bg-warning m-4 text-center">
+  <h3>How To Order Our Products</h3>
+</div>
+
+<div class="card card-body m-4" style="background-color: #ededed">
+  <b class="text-center">To place an order is simple</b>
+  <div class="d-flex" style="justify-content: space-between">
+    <p>1. Click the desired product you wish to order.</p>
+    <img
+      src="{% static 'images/screenshot.png' %}"
+      width="500"
+      height="300"
+      alt=""
+    />
+  </div>
+
+  <!-- number2 -->
+  <div>
+    <p>2. you will then see a bar where you can place a call to order.</p>
+  </div>
+
+  <div>
+    <p>3. once done, then just wait for some time then your product(s) will given to you.</p>
+  </div>
+</div>
+
+<div></div>
+
+{% endblock %}

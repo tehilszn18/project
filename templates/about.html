@@ -1,0 +1,114 @@
+{% extends 'layout.html' %}
+<style></style>
+{% load static %}
+<!-- block bgnn -->
+{% block content %}
+
+<div style="background-color: #ededed" class="m-4">
+  <div class="text-center">
+    <h3 class="text-danger pt-2">About Us</h3>
+    <br />
+    <h5 style="padding-bottom: 5px">
+      Tehilians is a global fashion and lifestyle e-retailer committed to making
+      the beauty of fashion accessible to all. We use on-demand manufacturing
+      technology to connect suppliers to our agile supply chain, reducing
+      inventory waste and enabling us to deliver a variety of affordable
+      products to customers around the world. From our global offices, we reach
+      customers in more than 100 countries.
+    </h5>
+  </div>
+
+  <div class="p-4 text-center">
+    <h3 class="text-danger pt-2">
+      Making The Beauty of Fashion Accessible to All
+    </h3>
+    <br />
+    <div>
+      <h5>
+        Consumers no longer follow a unified standard of what is considered
+        "fashionable" or "beautiful". We believe that the clothes we wear
+        reflect our personalities and we want to empower everyone to explore and
+        express their individuality. To do this, Tehilians creates a wide range
+        of options to fit any mood or occasion.
+      </h5>
+
+      <img
+        src="{% static 'images/model.webp' %}"
+        height="300"
+        width="400"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
+<div
+  class="d-md-flex text-light d-flex p-2"
+  style="background-color: black; justify-content: space-between"
+>
+  <h4>Tehilians<i class="bi bi-x-diamond text-light mx-2"></i></h4>
+  <div class="d-block">
+    <h4><i class="bi bi-envelope-at-fill mx-1"></i> Email support</h4>
+    <p>thetehilians@gmail.com</p>
+  </div>
+</div>
+
+<div
+  class="d-flex d-md-flex mt-1"
+  style="justify-content: space-between; background-color: black"
+>
+  <div class="">
+    <h5 class="text-left text-warning px-3 text-decoration-underline">
+      About us
+    </h5>
+    <a class="d-block nav-link text-warning" href="{% url 'core:contact_us' %}"
+      >Contact us</a
+    >
+    <a class="d-block nav-link text-warning" href="{% url 'core:about' %}"
+      >About us</a
+    >
+    <a class="d-block nav-link text-warning" href="{% url 'core:rules' %}"
+      >Terms and Conditions</a
+    >
+    <a
+      class="d-block nav-link text-warning"
+      href="{% url 'core:privacy_policy' %}"
+      >Privacy policy</a
+    >
+    <a
+      class="d-block nav-link text-warning"
+      href="{% url 'core:cookie_notice' %}"
+      >Cookie policy</a
+    >
+  </div>
+
+  <div>
+    <h5 class="text-warning px-3 text-decoration-underline">Let us help you</h5>
+    <a class="d-block nav-link text-warning" href="{% url 'core:howtoorder' %}"
+      >How to order a product</a
+    >
+    <a class="d-block nav-link text-warning" href="{% url 'core:ouroptions' %}"
+      >Delivery options</a
+    >
+  </div>
+
+  <!-- <div>
+    <h5 class="text-warning px-3 text-decoration-underline">Our Resources</h5>
+    <a class="d-block nav-link text-warning" href=""
+      ><i class="bi bi-instagram">Our insta</i></a
+    >
+
+    <a
+      class="d-block nav-link text-warning"
+      href="{https://twitter.com/tehilszn1}"
+      ><i class="bi bi-twitter">Our twitter</i></a
+    >
+  </div> -->
+</div>
+
+<div style="background-color: black" class="text-center">
+  <p class="text-light">Tehilians 2023.</p>
+</div>
+
+<!-- f -->
+{% endblock %}

@@ -1,0 +1,366 @@
+<!-- loadstatic -->
+{% load static %} {% block content %}
+<!-- block -->
+<style></style>
+
+<!-- <div style="display: block; background-color: brown; margin-bottom: 10px">
+  <h4 class="text-center text-light">Looking for anything?</h4>
+  <form
+    class="example text-center"
+    action="/action_page.php"
+    style="margin: auto; max-width: 300px"
+  >
+    <input type="text" placeholder="Search here..." name="search2" />
+    <button type="submit"><i class="bi bi-search p-2"></i></button>
+  </form>
+</div> -->
+
+<div class="d-block m-2">
+  <h4 class="text-center">our categories</h4>
+  <div class="d-flex">
+    <a
+      class="d-flex card card-body text-dark mt-4 m-2 mb-4"
+      style="text-decoration: none; border-color: black"
+      href="{% url 'core:tehilians_polos' %}"
+      >Tops</a
+    >
+    <a
+      class="card card-body text-dark mt-4 mb-4 m-2"
+      style="text-decoration: none; border-color: black"
+      href="{% url 'core:tehilians_hats' %}"
+      >Trucker Hats</a
+    >
+    <a
+      class="card card-body text-dark mt-4 mb-4 m-2"
+      style="text-decoration: none; border-color: black"
+      href="{% url 'core:tehilians_pants' %}"
+      >Pants</a
+    >
+  </div>
+</div>
+
+<!-- carousel -->
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="">
+        <div class="p-2 d-md-block d-block" style="background-color: black">
+          <img
+            src="{% static 'images/tehilians1.jpeg' %}"
+            class="d-block col-md-6 mx-auto"
+            height="200"
+            alt="..."
+          />
+          <div class="d-block text-center">
+            <h3 class="text-center text-light">
+              your summer to winter must-haves <br />check below
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="">
+        <div
+          class="p-2 d-md-block d-block"
+          style="justify-content: space-between; background-color: black"
+        >
+          <img
+            src="{% static 'images/sale1.jpeg' %}"
+            class="d-block col-md-6 mx-auto"
+            height="200"
+            alt="..."
+          />
+
+          <div class="d-block text-center">
+            <h3 class="text-light">Get 70% off for your first purchase</h3>
+            <a class="text-decoration-none" href="{% url 'account:accounts' %}"
+              >click here</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- fghfgh -->
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- carousel end -->
+
+<div class="d-md-flex d-block px-2 card card-body" style="background-color: beige">
+  <div class="d-block bg-light text-center" >
+    <h4 class="text-center">Our Products</h4>
+    <div class="flex-md-row d-md-block" style="margin-left: 200px">
+      <div>
+        <div class="d-flex w-20">
+          <div class="p-3">
+            <a
+              href="{% url 'core:hats1' %}"
+              class="text-decoration-underline card card-body text-dark"
+              style="border-color: black"
+              ><img
+                src="{% static 'images/hats1.jpg' %}"
+                width="200"
+                height="250"
+                alt=""
+              />
+              <h5>Trucker hats(black)</h5>
+              <h6>N3,000</h6>
+            </a>
+          </div>
+
+          <div class="p-3" style="margin-left: 30px">
+            <a
+              href=""
+              class="text-decoration-underline card card-body text-dark"
+              style="border-color: black"
+            >
+              <img
+                src="{% static 'images/pants1.jpg' %}"
+                width="200"
+                height="250"
+                alt=""
+              />
+              <h5>Cargo Pants(Brown)</h5>
+              <h6>N7,500</h6>
+            </a>
+          </div>
+
+          <div class="p-3" style="margin-left: 30px">
+            <a
+              href="{% url 'core:whiteplaintee' %}"
+              class="text-decoration-underline text-dark card card-body"
+              style="border-color: black"
+              ><img
+                src="{% static 'images/t-shirt.jpeg' %}"
+                width="200"
+                height="250"
+                alt=""
+              />
+              <h5>Plain Tees(White)</h5>
+              <h6>N3,000</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- second row -->
+      <div class="d-flex w-20">
+        <div class="p-3">
+          <a
+            href="{% url 'core:graphicswhitetee' %}"
+            class="text-decoration-underline text-dark card card-body"
+            style="border-color: black"
+            ><img
+              src="{% static 'images/t-shirt4.jpg' %}"
+              alt=""
+              width="200"
+              height="250"
+            />
+            <h5>White Tees(grapics)</h5>
+            <p>N5,000</p>
+          </a>
+        </div>
+
+        <div class="p-3 px-5">
+          <a
+            href="{% url 'core:plaintee' %}"
+            class="text-decoration-underline text-dark card card-body"
+            style="border-color: black"
+            ><img
+              src="{% static 'images/t-shirt3.jpg' %}"
+              height="250"
+              width="200"
+              alt=""
+            />
+            <h5>Plain Tees</h5>
+            <p>N5,000</p>
+          </a>
+        </div>
+
+        <div class="p-3">
+          <a
+            href=""
+            class="text-decoration-underline text-dark card card-body"
+            style="border-color: black"
+            ><img
+              src="{% static 'images/pants2.webp' %}"
+              width="200"
+              height="250"
+              alt=""
+            />
+            <h5>Cargo Pants(light brown)</h5>
+            <p>N8,000</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- third row -->
+
+      <div class="d-flex">
+        <div class="p-3">
+          <a
+            href=""
+            class="text-decoration-underline text-dark card card-body"
+            style="border-color: black"
+            ><img
+              src="{% static 'images/jeans.webp' %}"
+              alt=""
+              width="200"
+              height="250"
+            />
+            <h5>
+              Blue Baggy Highrise<br />
+              Jeans
+            </h5>
+            <p>N9,700</p>
+          </a>
+        </div>
+
+        <div class="p-3 px-5">
+          <a
+            href="{% url 'core:theboystee' %}"
+            class="text-decoration-underline text-dark card card-body"
+            style="border-color: black"
+            ><img
+              src="{% static 'images/t-shirt5.jpg' %}"
+              width="200"
+              height="250"
+              alt=""
+            />
+            <h5>"the boys" Black Tees</h5>
+            <p>N7,000</p>
+          </a>
+        </div>
+
+        <div class="px-1 p-3">
+          <a
+            href="{% url 'core:femalewhitetee' %}"
+            class="text-decoration-underline text-dark card card-body"
+            style="border-color: black"
+            ><div>
+              <img
+                src="{% static 'images/t-shirt2.webp' %}"
+                height="250"
+                width="200"
+                alt=""
+              />
+              <h5>Female Plain White Tees</h5>
+              <p>N4,750</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<div
+  class="d-md-flex text-light d-flex"
+  style="background-color: black; justify-content: space-between"
+>
+  <h4 class="m-2">Tehilians<i class="bi bi-x-diamond text-light mx-2"></i></h4>
+  <div class="d-block">
+    <h4 class="m-2">
+      <i class="bi bi-envelope-at-fill mx-1"></i> Email support
+    </h4>
+    <p>thetehilians@gmail.com</p>
+  </div>
+
+  <!-- <div class="d-md-block d-none m-2">
+    <h4>Get the latest updates from us</h4>
+    <form enctype="multipart/form-data" method="post" action="">
+      {% csrf_token %}
+      <div>
+        <label for="email"></label>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          id="email"
+          name="email"
+        />
+      </div>
+      <button class="btn btn-warning" type="submit">Subscribe</button>
+    </form>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{% static 'assets/app.js' %}"></script>-->
+</div>
+
+<div
+  class="d-flex d-md-flex mt-1"
+  style="justify-content: space-between; background-color: black"
+>
+  <div class="">
+    <h5 class="text-left text-warning px-3 text-decoration-underline">
+      About us
+    </h5>
+    <a class="d-block nav-link text-warning" href="{% url 'core:contact_us' %}"
+      >Contact us</a
+    >
+    <a class="d-block nav-link text-warning" href="{% url 'core:about' %}"
+      >About us</a
+    >
+    <a class="d-block nav-link text-warning" href="{% url 'core:rules' %}"
+      >Terms and Conditions</a
+    >
+    <a
+      class="d-block nav-link text-warning"
+      href="{% url 'core:privacy_policy' %}"
+      >Privacy policy</a
+    >
+    <a
+      class="d-block nav-link text-warning"
+      href="{% url 'core:cookie_notice' %}"
+      >Cookie policy</a
+    >
+  </div>
+
+  <div>
+    <h5 class="text-warning px-3 text-decoration-underline">Let us help you</h5>
+    <a class="d-block nav-link text-warning" href="{% url 'core:howtoorder' %}"
+      >How to order a product</a
+    >
+    <a class="d-block nav-link text-warning" href="{% url 'core:ouroptions' %}"
+      >Delivery options</a
+    >
+  </div>
+
+  <!-- <div>
+    <h5 class="text-warning px-3 text-decoration-underline">Our Resources</h5>
+    <a class="d-block nav-link text-warning" href=""
+      ><i class="bi bi-instagram">Our insta</i></a
+    >
+
+    <a class="d-block nav-link text-warning" href=""
+      ><i class="bi bi-twitter">Our twitter</i></a
+    >
+  </div> -->
+</div>
+
+<div style="background-color: black" class="text-center">
+  <p class="text-light">Tehilians 2023.</p>
+</div>
+
+<!-- endblock -->
+{% endblock %}

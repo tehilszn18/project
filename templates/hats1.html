@@ -1,0 +1,120 @@
+{% extends 'layout.html' %}
+<style></style>
+{% load static %}
+<!-- block bgnn -->
+{% block content %}
+
+<div class="d-block d-md-flex" style="background-color: #ededed">
+  <div
+    class="card card-body border-bottom mx-md-4 mx-auto mt-2 col-10 col-md-9"
+  >
+    <img
+      style="padding-left: 70px"
+      src="{% static 'images/hats1.jpg' %}"
+      height="300"
+      width="400"
+      alt=""
+    />
+  </div>
+
+  <div
+    class="card card-body text-center mt-2 mx-md-4 mx-auto border-bottom col-10 col-md-5"
+  >
+    <!-- card body is important -->
+    <h5>Trucker hats(black)</h5>
+    <h6>N3,000</h6>
+    <p>
+      desc. <br />A stylish way to protect yourself from the sun rays with our
+      black trucker hat
+    </p>
+    <p>Available sizes <br />One size fits all</p>
+    <div class="btn btn-success">
+      {% if not request.user.is_authenticated %}
+      <li class="nav-item">
+        <a
+          class="nav-link btn btn-success text-light"
+          href="{% url 'account:accounts' %}"
+          >Log into your account to place an order :)
+        </a>
+        {% else %}
+        <div class="btn btn-success">
+          call our number +2348143556118 to order
+        </div>
+      </li>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="mt-4">
+  <div class="justify-content-between d-flex mx-2">
+    <b class="p-2">Others also view</b>
+    <a href="{% url 'core:tehilians_hats' %}"
+      >Check out more of our headwears></a
+    >
+  </div>
+  <div class="d-flex">
+    <div class="card card-body m-2 d-flex bg-dark">
+      <a
+        class="d-md-flex"
+        style="justify-content: space-evenly"
+        href="{% url 'core:hats2' %}"
+        ><img
+          src="{% static 'images/hats2.jpg' %}"
+          height="70"
+          width="90"
+          alt=""
+        />
+        <div class="text-light d-block text-center">
+          <h5>Trucker hat (White & Red)</h5>
+          <p>N3,000</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- two -->
+    <div class="card card-body m-2 d-flex bg-dark">
+      <a
+        class="d-md-flex"
+        style="justify-content: space-evenly"
+        href="{% url 'core:graphicswhitetee' %}"
+        ><img
+          src="{% static 'images/t-shirt4.jpg' %}"
+          width="90"
+          height="70"
+          alt=""
+        />
+        <div class="text-light d-block text-center">
+          <h5>White Tee(Grapics)</h5>
+          <p>N5,000</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- three -->
+    <div class="card card-body m-2 d-flex bg-dark">
+      <a
+        class="d-md-flex"
+        style="justify-content: space-evenly"
+        href="{% url 'core:femalewhitetee' %}"
+        ><img
+          src="{% static 'images/t-shirt2.webp' %}"
+          height="70"
+          width="90"
+          alt=""
+        />
+        <div class="text-light d-block text-center">
+          <h5>Female Plain White Tees</h5>
+          <p>N4,750</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- conc. -->
+<div style="background-color: black" class="text-center">
+  <p class="text-light">Tehilians 2023.</p>
+</div>
+
+{% endblock %}

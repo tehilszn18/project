@@ -1,0 +1,63 @@
+{% block content %}
+<!-- t -->
+{% load static %}
+<style></style>
+<div style="background-color: black" class="text-warning">
+  <div>
+    <h2 class="text-light" style="text-decoration: underline">About us</h2>
+    <div style="display: block">
+      <a
+        class="d-block nav-link text-warning"
+        href="{% url 'core:contact_us' %}"
+        >Contact us</a
+      >
+      <a class="d-block nav-link text-warning" href="{% url 'core:about' %}"
+        >About us</a
+      >
+      <a class="d-block nav-link text-warning" href="{% url 'core:rules' %}"
+        >Terms and Conditions</a
+      >
+      <a
+        class="d-block nav-link text-warning"
+        href="{% url 'core:privacy_policy' %}"
+        >Privacy policy</a
+      >
+      <a
+        class="d-block nav-link text-warning"
+        href="{% url 'core:cookie_notice' %}"
+        >Cookie policy</a
+      >
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-light" style="text-decoration: underline">
+      Let us help you
+    </h2>
+    <a
+      style="text-decoration: none; color: orange"
+      href="{% url 'core:howtoorder' %}"
+      >How to order/return a product?</a
+    >
+    <a
+      style="display: block; color: orange; text-decoration: none"
+      href="{% url 'core:ouroptions' %}"
+      >Delivery options</a
+    >
+  </div>
+
+  <div style="margin-top: 20px">
+    <a href="{% url 'core:home' %}"
+      ><button style="background-color: orange">
+        Return back to main page
+      </button></a
+    >
+  </div>
+
+  <div style="justify-content: center">
+    <p>Tehilians 2023.</p>
+  </div>
+</div>
+
+<!-- g -->
+{% endblock %}

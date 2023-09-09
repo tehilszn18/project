@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+<!-- block bgnn -->
+{% block content %}
+<style></style>
+<div class="mt-2 text-light" style="background-color: black;"> 
+  {% for message in messages %}
+  <!-- for loop -->
+  {% if message %}
+  <div class="alert alert-success mx-auto col-10 col-md-5">{{message}}</div>
+  {% endif %}
+  <!-- end of loop -->
+  {% endfor %}
+  <div class="d-flex justify-content-between mx-4">
+    <h3>Personal Details</h3>
+    <a href="{% url 'account:update_profile' request.user.profile.id %}"
+      >Edit</a
+    >
+  </div>
+  <div class="d-flex flex-md-row flex-column-reverse">
+    <div
+      class="card card-body text-center text-dark mt-2 mx-md-4 mx-auto border-bottom col-10 col-md-5"
+    >
+      <h3>Hello, {{request.user.first_name}} {{request.user.last_name}}</h3>
+      <strong class="text-secondary">{{request.user.email}}</strong>
+    </div>
+  </div>
+</div>
+
+<div class="text-center text-light" style="background-color: black;">
+  <div>
+    <h3>First Name</h3>
+    <p>{{request.user.first_name}}</p>
+  </div>
+
+  <div>
+    <h3>Username</h3>
+    <p>{{request.user.profile.username}}</p>
+  </div>
+
+  <div>
+    <h3>Gender</h3>
+    <p>{{request.user.profile.gender}}</p>
+  </div>
+
+  <div>
+    <h3>Email</h3>
+    <p>{{request.user.profile.email}}</p>
+  </div>
+
+  <div>
+    <h3>Phone Number</h3>
+    <p>{{request.user.profile.phone_number}}</p>
+  </div>
+
+  <div>
+    <h3>Residential Address</h3>
+    <p>{{request.user.profile.residential_address}}</p>
+  </div>
+
+  <div>
+    <h3>State of Residence</h3>
+    <p>{{request.user.profile.state_of_residence}}</p>
+  </div>
+
+  {% endblock %}
+</div>
